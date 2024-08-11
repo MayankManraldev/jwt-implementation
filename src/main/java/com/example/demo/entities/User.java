@@ -1,20 +1,20 @@
 package com.example.demo.entities;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.Past;
 import jakarta.validation.constraints.Size;
-import org.springframework.boot.autoconfigure.web.WebProperties;
 
 import java.util.Date;
 
 @Entity
 public class User {
-
-
     @Id
-@GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Size(min=2, message = "Name should have atleast 2 characters")
+    @Size(min = 2, message = "Name should have atleast 2 characters")
     private String username;
     private String city;
     private String status;
@@ -32,14 +32,14 @@ public class User {
     }
 
     public String getPassword() {
-		return password;
-	}
+        return password;
+    }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
-	public User(int id, String username, String city, String status) {
+    public User(int id, String username, String city, String status) {
         this.id = id;
         this.username = username;
         this.city = city;
