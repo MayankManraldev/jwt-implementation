@@ -1,8 +1,7 @@
-package com.example.demo.Service;
+package com.example.demo.service;
 
 import com.example.demo.entities.User;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
 package com.example.demo.serviceImpl;
 
-import com.example.demo.Service.UserService;
+import com.example.demo.service.UserService;
 import com.example.demo.dao.UserRepository;
 import com.example.demo.entities.User;
 import com.example.demo.exception.UserNotFoundException;
